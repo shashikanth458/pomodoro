@@ -1,0 +1,49 @@
+@import 'reset'; 
+@import 'variables'; 
+@import 'mixins';
+
+.clk{
+  height:$clk-hgt-wdth;
+  width:$clk-hgt-wdth;
+  margin:auto;
+  border:$clk-brdr-clr;
+  @include brdr-radius(300px);
+}
+.vrtcl-center{
+  position:absolute;
+  margin:auto;
+  height:400px;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0
+}
+.clearfix:after{
+  content: " "; 
+   visibility: hidden;
+   display:block;
+   height: 0;
+   clear: both;
+}
+.icn{
+  width:$icn-wdth;
+  height:$icn-hgt;
+  
+}
+.play{
+  @extend .icn;
+  float:left;
+}
+.pause{
+  @extend .icn;
+  float:right;
+}
+.cancel{
+  display:inline-block;
+  @extend .icn;
+}
+.icn-container{
+  width:$clk-hgt-wdth;
+  margin:auto;
+  text-align:center;
+}

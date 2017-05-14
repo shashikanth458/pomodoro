@@ -1,0 +1,20 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shashikanth voleti",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "gulp": "^3.9.1"
+  },
+  "description": ""
+}
