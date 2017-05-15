@@ -39,7 +39,7 @@ html, body {
   height: 300px;
   width: 300px;
   margin: auto;
-  border: 1px solid #E0E0E0;
+  border: 1px solid #5f5c5c;
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   -ms-border-radius: 300px;
@@ -65,11 +65,21 @@ html, body {
   width: 30px;
   height: 30px; }
 
+.clk > section {
+  font-size: 60px;
+  position: relative;
+  top: 100px;
+  left: 45px; }
+
 .play {
-  float: left; }
+  float: left;
+  background-color: #000; }
 
 .pause {
   float: right; }
+
+.cancel {
+  display: inline-block; }
 
 .icn-container {
   width: 300px;

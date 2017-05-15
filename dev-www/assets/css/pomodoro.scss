@@ -30,9 +30,16 @@
   height:$icn-hgt;
   
 }
+.clk > section{
+  font-size:$bg-fnt;
+  position:relative;
+  top:100px;
+  left:45px;
+}
 .play{
   @extend .icn;
   float:left;
+  background-color:#000;
 }
 .pause{
   @extend .icn;
