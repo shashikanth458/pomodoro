@@ -1,10 +1,10 @@
-<article class="vrtcl-center">
+<article ng-init="initMain()" class="vrtcl-center">
 	<div class='clk'>
 		<section>{{mnts}}:{{scns}}</section>
 	</div>
 	<div class='icn-container clearfix'>
 		<span class="play" ng-click="startTimer(2)"></span>
-		<span class="cancel"></span>
+		<span class="cancel" ng-click="stopTimer('click')"></span>
 		<span class="pause"></span>
 	<div>
 </article>

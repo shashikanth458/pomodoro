@@ -4,3 +4,23 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+@mixin transition($delay){
+   -webkit-transition: $delay all linear;
+   -moz-transition: $delay all linear;
+   -ms-transition: $delay all linear;
+   transition: $delay all linear;
+}
+
+@mixin defaultToCustom(){
+  -webkit-appearance: none;
+    background: inherit;
+    border: none;
+}
+
+@mixin overlayCustom($width){
+  position:fixed;
+  top:0;
+  height:100%;
+  width:$width;
+}

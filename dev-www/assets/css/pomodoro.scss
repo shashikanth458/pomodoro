@@ -1,7 +1,40 @@
 @import 'reset'; 
 @import 'variables'; 
 @import 'mixins';
-
+.page_header{
+  margin-top: 20px;
+  font-size: 2em;
+  overflow-x: auto;
+  text-align: center;
+}
+.over-lay{
+  background:$bdy-bcg;
+  @include overlayCustom(80%);
+}
+.over-lay-before{
+  content:'';
+  @include overlayCustom(100%);
+  z-index:100;
+  background: rgba(0, 0, 0, 0.3);
+}
+.z-index101{
+  z-index:101;
+}
+input,button{
+  outline:none;
+  font-family: inherit;
+  @include defaultToCustom();
+}
+input{
+  box-shadow: 1px 2px 3px #292929;
+  border-bottom: 1px solid rgba(41, 41, 41, 0.06);
+  border-radius: 5px;
+}
+button{
+  letter-spacing: inherit;
+  box-shadow: 1px 2px 3px #292929;
+  border-radius: 5px;
+}
 .clk{
   height:$clk-hgt-wdth;
   width:$clk-hgt-wdth;
@@ -16,41 +49,79 @@
   top:0;
   bottom:0;
   right:0;
-  left:0
+  left:0;
 }
-.clearfix:after{
+.clearfix::after{
   content: " "; 
    visibility: hidden;
    display:block;
    height: 0;
    clear: both;
 }
+.dsp-non{
+  display:none;
+}
 .icn{
   width:$icn-wdth;
   height:$icn-hgt;
-  
 }
 .clk > section{
   font-size:$bg-fnt;
-  position:relative;
-  top:100px;
-  left:45px;
+  position: absolute;
+  width: 80%;
+  top: 100px;
+  text-align: center;
+}
+.notify{
+  position:absolute;
+  width:100%;
+  min-height:50px;
+  text-align:center;
+  background:$bdy-bcg;
+  @include transition(0.5s);  
+}
+.notify-top{
+  padding-top:20px;
+  top:0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.notify-btm{
+  bottom:0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-bottom: 5px;
 }
 .play{
   @extend .icn;
   float:left;
-  background-color:#000;
+  background-image:url(../images/play.png);
+  background-repeat:no-repeat;
+      background-position: center center;
 }
 .pause{
   @extend .icn;
-  float:right;
+  
 }
 .cancel{
+  float:right;
   display:inline-block;
   @extend .icn;
+  background-image:url(../images/cancel.png);
+  background-repeat:no-repeat;
+  background-position: center center;
 }
 .icn-container{
   width:$clk-hgt-wdth;
   margin:auto;
   text-align:center;
+}
+.mrgnbtm5px{
+  margin-bottom:5px;
+}
+.btm-neg-100{
+  bottom:-100%;
+}
+.top-neg-100{
+  top:-100%;
 }

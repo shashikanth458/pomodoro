@@ -1,3 +1,5 @@
+@import 'variables'; 
+
 @font-face {
   font-family: 'pencil';
   src: url('../fonts/Thin-Pencil-Handwriting.otf');
@@ -36,4 +38,8 @@ html, body {
   font-family:pencil;
   height: 100%;
   width: 100%;
+  overflow:hidden;
+  position:relative;
+  background:$bdy-bcg;
+  letter-spacing:2px;
 }
