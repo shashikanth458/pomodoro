@@ -54,6 +54,9 @@
         function checkingPomodoroStateAndWarningUser() {
           var a = $interval(function() {
             if ($scope.$parent.interacted_text) {
+              $scope.$parent.MAIN.wrng_count = +1;
+              appDataFactory.setWarningCountPercentage(
+                $scope.$parent.MAIN.wrng_count*100/$scope.$parent.MAIN.pomo_count);
               $scope.$parent.interacted_text = "Hey " + $scope.$parent.user_name + ",I am counting on you play fair";
               $scope.spellOut({
                 'text' : $scope.$parent.interacted_text+"and"+$scope.$parent.button_text,

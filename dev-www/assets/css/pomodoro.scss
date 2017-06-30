@@ -1,11 +1,51 @@
 @import 'reset'; 
 @import 'variables'; 
 @import 'mixins';
+
+ul li{
+  font-size: 20px;
+  height: 60px;
+  text-align: center;
+  padding: 10px 10px;
+  box-shadow: 1px 2px 3px #292929;
+  border-radius: 15px;
+}
+.move-left0{
+  position:relative;
+  left:0;
+  @include transition(0.5s);
+}
+.move-left-minus-100{
+  position:relative;
+  left:-100%;
+  @include transition(0.5s);
+}
+.buttn:active{
+   font-size: 18px;
+   box-shadow: 0px 0px 0px;
+}
 .page_header{
   margin-top: 20px;
   font-size: 2em;
   overflow-x: auto;
   text-align: center;
+}
+.menu-header{
+  height:200px;
+  padding:40px 10px 0;
+}
+.menu-header .name-icn{    
+   display: inline-block;
+   border: $clk-brdr-clr;
+   @include brdr-radius(150px);
+   width: 56px;
+   height: 56px;
+   text-align: center;
+   padding-top: 10px;
+   font-weight:bold;
+  }
+.menu-header span + p{
+  display:inline-block;
 }
 .over-lay{
   background:$bdy-bcg;
@@ -97,7 +137,7 @@ button{
   float:left;
   background-image:url(../images/play.png);
   background-repeat:no-repeat;
-      background-position: center center;
+  background-position: center center;
 }
 .pause{
   @extend .icn;
@@ -124,4 +164,10 @@ button{
 }
 .top-neg-100{
   top:-100%;
+}
+.fnt20{
+  font-size:20px;
+}
+.fnt15{
+  font-size:15px;
 }

@@ -6,11 +6,27 @@
 			var route_change,
 			    MAIN = this;
 			    MAIN.pomo_count=0;
+			    MAIN.wrng_count = 0;
+			    MAIN.menu_block = true;
 			$scope.page_title = "";
 			$scope.static_text = "";
 			$scope.interacted_text = "";
 			$scope.user_name = "";
 			$scope.button_text = "";
+			
+			MAIN.checkingMenu = function(){
+			  if(MAIN.menu_block){
+			    return 'move-left0';
+			  }
+			  return 'move-left-minus-100';
+			};
+			
+			MAIN.menuClose = function(event){
+			  if(angular.element(event.target)[0].id==='menu'){
+			    MAIN.menu_block = false; 
+			  }
+			};
+			
 			$scope.spellOut = function(obj) {
 				TTS.speak({
 				text : obj.text,

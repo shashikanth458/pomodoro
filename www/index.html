@@ -44,8 +44,9 @@ under the License.
 		<div ng-class="{'top-neg-100':!static_text}" class="notify notify-top">
 			<label>{{static_text}}</label>
 		</div>
-		<div ng-include="'shared/views/menu.html'"></div>
-		<header class="page_header">
+		<div ng-class="MAIN.checkingMenu()" ng-include="'shared/views/menu.html'"  
+		ng-click="MAIN.menuClose($event)"></div>
+		<header ng-class="{'dsp-non':static_text}" class="page_header">
 			{{page_title}}
 		</header>
 		<main ng-view></main>

@@ -39,11 +39,63 @@ html, body {
   background: #E0DDCF;
   letter-spacing: 2px; }
 
+* {
+  box-sizing: border-box;
+  user-select: none; }
+
+ul li {
+  font-size: 20px;
+  height: 60px;
+  text-align: center;
+  padding: 10px 10px;
+  box-shadow: 1px 2px 3px #292929;
+  border-radius: 15px; }
+
+.move-left0 {
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.5s all linear;
+  -moz-transition: 0.5s all linear;
+  -ms-transition: 0.5s all linear;
+  transition: 0.5s all linear; }
+
+.move-left-minus-100 {
+  position: relative;
+  left: -100%;
+  -webkit-transition: 0.5s all linear;
+  -moz-transition: 0.5s all linear;
+  -ms-transition: 0.5s all linear;
+  transition: 0.5s all linear; }
+
+.buttn:active {
+  font-size: 18px;
+  box-shadow: 0px 0px 0px; }
+
 .page_header {
   margin-top: 20px;
   font-size: 2em;
   overflow-x: auto;
   text-align: center; }
+
+.menu-header {
+  height: 200px;
+  padding: 40px 10px 0; }
+
+.menu-header .name-icn {
+  display: inline-block;
+  border: 1px solid #474448;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  border-radius: 150px;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold; }
+
+.menu-header span + p {
+  display: inline-block; }
 
 .over-lay {
   background: #E0DDCF;
@@ -170,3 +222,9 @@ button {
 
 .top-neg-100 {
   top: -100%; }
+
+.fnt20 {
+  font-size: 20px; }
+
+.fnt15 {
+  font-size: 15px; }

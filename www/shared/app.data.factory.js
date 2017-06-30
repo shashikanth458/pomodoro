@@ -16,6 +16,12 @@
 			adf.getIsBreakOn = function() {
 				return adf_var.is_break_on;
 			};
+			adf.setWarningCount = function(num){
+			 adf_var.warning_count = num; 
+			};
+			adf.getWarningCount = function(){
+        return adf_var.warning_count||null; 
+      };
 			return adf;
 		}
 

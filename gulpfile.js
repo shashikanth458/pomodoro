@@ -12,3 +12,4 @@ gulp.task('sass',function(){
 					.pipe(gsass().on('error',gsass.logError))
 					.pipe(gulp.dest('./www/assets/css'));
 });
+gulp.task('default',['sass']);

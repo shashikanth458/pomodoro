@@ -43,3 +43,7 @@ html, body {
   background:$bdy-bcg;
   letter-spacing:2px;
 }
+*{
+  box-sizing: border-box;
+  user-select:none;  
+}
